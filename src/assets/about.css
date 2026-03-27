@@ -1,0 +1,57 @@
+/* BACKGROUND */
+.about {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #0f172a, #1e293b);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+}
+
+/* CARD */
+.about-container {
+  max-width: 700px;
+  width: 100%;
+  padding: 40px;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(12px);
+  color: white;
+  text-align: center;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
+}
+
+/* TITLE */
+.about-container h1 {
+  margin-bottom: 20px;
+  font-size: 32px;
+}
+
+/* TEXT */
+.about-container p {
+  margin-top: 12px;
+  color: #cbd5f5;
+  line-height: 1.6;
+}
+
+/* CREDIT */
+.credit a {
+  color: #3b82f6;
+  text-decoration: none;
+}
+
+/* BUTTON */
+.about-btn {
+  display: inline-block;
+  margin-top: 25px;
+  padding: 12px 22px;
+  border-radius: 8px;
+  background: #3b82f6;
+  color: white;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.about-btn:hover {
+  background: #2563eb;
+}

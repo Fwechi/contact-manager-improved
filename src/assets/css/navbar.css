@@ -1,0 +1,48 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /* ✅ important */
+}
+
+/* NAVBAR */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; /* ✅ FIX alignment */
+  padding: 12px 45px;
+  background-color: rgb(5, 121, 121);
+  color: #fff;
+  width: 100%; /* ✅ ensure full width */
+}
+
+/* LEFT */
+.navbar-left {
+  display: flex; /* ✅ FIXED */
+  align-items: center;
+}
+
+/* BRAND */
+.navbar-brand {
+  font-size: 1.8rem;
+  text-decoration: none;
+  color: white;
+}
+
+/* RIGHT */
+.navbar-right {
+  display: flex;
+  align-items: center;
+  gap: 20px; /* ✅ better spacing */
+}
+
+/* LINKS */
+.navbar-link {
+  color: #fff;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.navbar-link:hover {
+  text-decoration: underline;
+}

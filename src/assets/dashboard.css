@@ -1,0 +1,246 @@
+/* ================= LAYOUT ================= */
+.dashboard {
+  display: flex;
+  min-height: 100vh; /* ✅ fix vh clipping */
+  font-family: "Segoe UI", sans-serif;
+}
+
+/* ================= SIDEBAR ================= */
+.sidebar {
+  width: 250px;
+  background: linear-gradient(180deg, #1e293b, #0f172a);
+  color: #fff;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.logo {
+  margin-bottom: 30px;
+  font-size: 20px;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+}
+
+/* NAV */
+.sidebar nav {
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar a {
+  text-decoration: none;
+  color: #cbd5f5;
+  padding: 12px;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  transition: all 0.25s ease;
+}
+
+.sidebar a:hover {
+  background: #334155;
+  transform: translateX(4px);
+}
+
+.sidebar a.active {
+  background: #3b82f6;
+  color: #fff;
+}
+
+/* ================= MAIN ================= */
+.main {
+  flex: 1;
+  background: #f8fafc;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ================= HEADER ================= */
+.header {
+  padding: 18px 24px;
+  background: white;
+  border-bottom: 1px solid #e2e8f0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header h2 {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+/* ================= CONTENT ================= */
+.content {
+  padding: 20px;
+  overflow-y: auto;
+}
+
+/* ================= CONTACTS PAGE ================= */
+.contacts-container {
+  width: 100%;
+}
+
+/* HEADER (TITLE + SEARCH + BUTTON) */
+.contacts-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 22px;
+}
+
+.contacts-header h2 {
+  font-weight: 600;
+  font-size: 20px;
+}
+
+/* RIGHT SIDE */
+.header-right {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+/* SEARCH */
+.search {
+  padding: 9px 12px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  width: 240px;
+  outline: none;
+  transition: all 0.2s ease;
+}
+
+.search:focus {
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 2px rgba(59,130,246,0.15);
+}
+
+/* BUTTON */
+.btn-primary {
+  background: #3b82f6;
+  color: white;
+  padding: 9px 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btn-primary:hover {
+  background: #2563eb;
+  transform: translateY(-1px);
+}
+
+/* ================= STATS ================= */
+.stats {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 22px;
+}
+
+.card {
+  flex: 1;
+  background: white;
+  padding: 20px;
+  border-radius: 14px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+}
+
+.card h3 {
+  font-size: 26px;
+  margin-bottom: 6px;
+  color: #3b82f6;
+}
+
+.card p {
+  font-size: 13px;
+  color: #64748b;
+}
+
+/* ================= TABLE ================= */
+.table-card {
+  background: white;
+  padding: 18px;
+  border-radius: 14px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+}
+
+/* ================= ICONS ================= */
+.icon {
+  margin-right: 12px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.icon.edit {
+  color: #3b82f6;
+}
+
+.icon.edit:hover {
+  transform: scale(1.2);
+}
+
+.icon.delete {
+  color: #ef4444;
+}
+
+.icon.delete:hover {
+  transform: scale(1.2);
+}
+
+/* ================= EMPTY ================= */
+.empty {
+  text-align: center;
+  margin-top: 20px;
+  color: #64748b;
+}
+
+/* ================= LOADER ================= */
+.loader {
+  text-align: center;
+  margin-top: 50px;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 900px) {
+  .dashboard {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  .sidebar nav {
+    flex-direction: row;
+    gap: 10px;
+  }
+
+  .stats {
+    flex-direction: column;
+  }
+
+  .contacts-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .header-right {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .search {
+    width: 100%;
+  }
+}
