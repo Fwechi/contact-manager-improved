@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import "../assets/CSS/form.css";
+import "../assets/css/form.css";
 import { API } from "../services/api";
 import { toast } from "react-toastify";
 import {

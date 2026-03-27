@@ -7,7 +7,7 @@ import {
   FaRegAddressCard,
   FaPowerOff,
 } from "react-icons/fa6";
-import "../assets/CSS/sidebar.css";
+import "../assets/css/sidebar.css";
 import { useState } from "react";
 
 const Sidebar = () => {
