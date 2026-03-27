@@ -3,10 +3,21 @@ const cors = require("cors");
 
 const app = express();
 
-// ✅ CORS FIX
+// ✅ ALLOW BOTH LOCAL + DEPLOYED FRONTEND
+const allowedOrigins = [
+  "http://localhost:5173",
+  "https://contact-manager-improved.vercel.app",
+];
+
 app.use(
   cors({
-    origin: "http://localhost:5173",
+    origin: function (origin, callback) {
+      if (!origin || allowedOrigins.includes(origin)) {
+        callback(null, true);
+      } else {
+        callback(new Error("Not allowed by CORS"));
+      }
+    },
     credentials: true,
   })
 );
@@ -107,6 +118,9 @@ app.put("/contactmsyt/update-contact/:id", (req, res) => {
 
 // ================= SERVER =================
 
-app.listen(5000, () => {
-  console.log("Server running on http://localhost:5000");
+// ✅ FIX FOR RENDER
+const PORT = process.env.PORT || 5000;
+
+app.listen(PORT, () => {
+  console.log(`Server running on port ${PORT}`);
 });
