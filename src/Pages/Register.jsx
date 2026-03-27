@@ -21,7 +21,7 @@ const Register = () => {
     e.preventDefault();
 
     try {
-      await API.post("/contactmsyt/register", values);
+      const res = await API.post("/contactmsyt/register", values);
 
       toast.success("Registration Successful", {
         position: "top-center",
